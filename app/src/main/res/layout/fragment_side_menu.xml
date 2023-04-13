@@ -1,14 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".presentation.ui.fragments.SideMenuFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@color/red"
+        android:padding="16dp"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:src="@drawable/netflix_logo_white"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="50dp" />
+
+        <Button
+            android:id="@+id/button_chat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@color/red"
+            android:fontFamily="@font/inter"
+            android:drawableLeft="@drawable/ic_chat"
+            android:text="Chat"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            style="@style/Widget.AppCompat.Button"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <Button
+            android:id="@+id/button_films"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@color/red"
+            android:fontFamily="@font/inter"
+            android:textAlignment="textStart"
+            android:drawableLeft="@drawable/ic_film"
+            android:text="Films"
+            android:textColor="@color/white"
+            style="@style/Widget.AppCompat.Button"
+            app:layout_constraintEnd_toEndOf="@+id/button_chat"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/button_chat"
+            app:layout_constraintTop_toBottomOf="@+id/button_chat" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_rounded"
+            android:fontFamily="@font/inter"
+            android:text="Search"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/button_films"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/button_films"
+            tools:layout_editor_absoluteY="404dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
